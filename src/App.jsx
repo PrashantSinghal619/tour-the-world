@@ -40,8 +40,16 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/favourite-places" component={FavouritePlaces} />
+          <Route
+            exact
+            path="/"
+            render={props => <Home {...props} appData={locations} />}
+          />
+          <Route
+            exact
+            path="/favourite-places"
+            render={props => <FavouritePlaces {...props} />}
+          />
         </Switch>
       </div>
     </Router>

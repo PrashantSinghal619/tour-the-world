@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Card from "./Card";
 
 class Home extends React.Component {
   constructor(props) {
@@ -20,7 +21,9 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <Header title={this.title}></Header>
-        You are on Home page
+        {this.props.appData.map((location, index) => (
+          <Card {...location} key={index} />
+        ))}
       </div>
     );
   }

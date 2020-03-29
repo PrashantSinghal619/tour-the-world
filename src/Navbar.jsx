@@ -9,7 +9,7 @@ const Navbar = () => {
           <Link
             to={{
               pathname: "/",
-              state: { status: "homeActive", title: "Tour The World" }
+              state: { status: "homeActive" }
             }}
           >
             Home
@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link
             to={{
               pathname: "/favourite-places",
-              state: { status: "favouriteActive", title: "Favourite Places" }
+              state: { status: "favouriteActive" }
             }}
           >
             Favourite Places

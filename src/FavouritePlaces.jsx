@@ -2,16 +2,17 @@ import React from "react";
 import Header from "./Header";
 
 class FavouritePlaces extends React.Component {
-  title = this.props.location.state["title"];
+  constructor(props) {
+    super(props);
+    this.title = "Favourite Places";
+    document.title = this.title;
+  }
 
+  // Page reload on same page link visit
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.location.state["status"] === "favouriteActive") {
       window.location.reload();
     }
-  }
-
-  componentDidMount() {
-    document.title = this.title;
   }
 
   render() {

@@ -6,11 +6,34 @@ import FavouritePlaces from "./FavouritePlaces";
 import "./App.css";
 
 function App() {
-  const [title, setTitle] = useState("Tour the world");
-
-  useEffect(() => {
-    document.title = title;
-  });
+  const [locations, setLocations] = useState([
+    {
+      name: "London",
+      description: "The older this city gets, the more it's admired",
+      imageSource: "https://source.unsplash.com/g-krQzQo9mI/300x200"
+    },
+    {
+      name: "The Alps",
+      description: "Do you dare take the hike?",
+      imageSource: ""
+    },
+    { name: "Nepal", description: "Land of the enlightened", imageSource: "" },
+    { name: "Hawaii", description: "Get lost in the sea", imageSource: "" },
+    { name: "Malaysia", description: "Truly Asia", imageSource: "" },
+    { name: "Australia", description: "Country down under", imageSource: "" },
+    {
+      name: "Mariana Trench",
+      description: "How deep can you go?",
+      imageSource: ""
+    },
+    { name: "Scandinavia", description: "Chill to the core", imageSource: "" },
+    { name: "Dubai", description: "As-salamu alaykum", imageSource: "" },
+    {
+      name: "Machu Pichu",
+      description: "Rediscover the beauty within this ancient city's ruins",
+      imageSource: ""
+    }
+  ]);
 
   return (
     <Router>
@@ -20,9 +43,6 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/favourite-places" component={FavouritePlaces} />
         </Switch>
-        <header className="App-header">
-          <h1>{title}</h1>
-        </header>
       </div>
     </Router>
   );

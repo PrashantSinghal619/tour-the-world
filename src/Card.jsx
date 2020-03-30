@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 const Card = props => {
   const iconStyle = props.favourite ? "fas" : "far"; // fas represents the style-class for solid (highlighted) icon

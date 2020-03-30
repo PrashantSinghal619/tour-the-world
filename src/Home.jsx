@@ -24,14 +24,16 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <Header title={this.title}></Header>
-        {this.props.appData.map((location, index) => (
-          <Card
-            key={index}
-            {...location}
-            onClick={() => this.props.onClick(location.name)}
-            favourite={location.favourite}
-          />
-        ))}
+        <div className="card-stash">
+          {this.props.appData.map((location, index) => (
+            <Card
+              key={index}
+              {...location}
+              onClick={() => this.props.onClick(location.name)}
+              favourite={location.favourite}
+            />
+          ))}
+        </div>
       </div>
     );
   }

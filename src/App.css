@@ -17,10 +17,33 @@
   font-size: calc(10px + 2vmin);
 }
 
+.card-stash {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.Card {
+  width: 300px;
+  margin: 2rem;
+}
+
 @media only screen and (max-width: 600px) {
 
   .Home,
   .FavouritePlaces {
     margin: 0;
+  }
+
+  .card-stash {
+    display: block;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .Card {
+    width: 87vw;
   }
 }

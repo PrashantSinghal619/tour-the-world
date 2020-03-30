@@ -9,7 +9,7 @@ const Navbar = () => {
         <li className="logo">
           <a href="#" className="nav-link">
             <span className="link-text logo-text">Tour The World</span>
-            <i className="fas fa-angle-double-right"></i>
+            <i className="fas fa-2x fa-angle-double-right"></i>
           </a>
         </li>
         <li id="home" className="nav-item">

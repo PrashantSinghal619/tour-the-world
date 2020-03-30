@@ -9,7 +9,14 @@
   --bg-secondary: #475268;
   --bg-tertiary: #26324b;
   --text-primary: #ececee;
+  --text-secondary: #aaaaaa;
   --transition-speed: 600ms;
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -26,6 +33,12 @@ ul {
 a {
   text-decoration: none;
   color: var(--text-primary);
+}
+
+img {
+  border: 0;
+  height: auto !important;
+  max-width: 100%;
 }
 
 code {

@@ -3,8 +3,8 @@
   width: 5rem;
   height: 100vh;
   position: fixed;
-  overflow: scroll;
   transition: width 200ms ease;
+  z-index: 1;
 }
 
 .Navbar-nav {
@@ -44,7 +44,7 @@
   margin-bottom: 1rem;
   text-align: center;
   background: var(--bg-tertiary);
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.3ch;
   width: 100%;
 }
@@ -119,7 +119,7 @@
   }
 
   .Navbar:hover .logo i {
-    margin-left: 11rem;
+    margin-left: 1rem;
   }
 
   .Navbar:hover .logo-text {

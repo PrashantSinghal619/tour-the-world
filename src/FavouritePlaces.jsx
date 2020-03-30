@@ -10,14 +10,15 @@ class FavouritePlaces extends React.Component {
   }
 
   // Page reload on same page link visit
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.location.state["status"] === "favouriteActive" &&
-      nextProps.appData === this.props.appData
-    ) {
-      window.location.reload();
-    }
-  }
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   if (
+  //     nextProps.location &&
+  //     nextProps.location.state["status"] === "favouriteActive" &&
+  //     nextProps.appData === this.props.appData
+  //   ) {
+  //     window.location.reload();
+  //   }
+  // }
 
   render() {
     return (

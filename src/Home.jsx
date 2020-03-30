@@ -10,18 +10,15 @@ class Home extends React.Component {
   }
 
   // Page reload on same page link visit
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.location.state["status"] === "homeActive" &&
-      nextProps.appData === this.props.appData
-    ) {
-      window.location.reload();
-    }
-  }
-
-  handleClick() {
-    return;
-  }
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   if (
+  //     nextProps.location &&
+  //     nextProps.location.state["status"] === "homeActive" &&
+  //     nextProps.appData === this.props.appData
+  //   ) {
+  //     window.location.reload();
+  //   }
+  // }
 
   render() {
     return (

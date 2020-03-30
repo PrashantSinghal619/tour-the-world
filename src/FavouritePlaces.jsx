@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Card from "./Card";
 
 class FavouritePlaces extends React.Component {
   constructor(props) {
@@ -10,7 +11,10 @@ class FavouritePlaces extends React.Component {
 
   // Page reload on same page link visit
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.location.state["status"] === "favouriteActive") {
+    if (
+      nextProps.location.state["status"] === "favouriteActive" &&
+      nextProps.appData === this.props.appData
+    ) {
       window.location.reload();
     }
   }
@@ -19,7 +23,14 @@ class FavouritePlaces extends React.Component {
     return (
       <div className="FavouritePlaces">
         <Header title={this.title}></Header>
-        You are on Favourite Places page
+        {this.props.appData.map((location, index) => (
+          <Card
+            key={index}
+            {...location}
+            onClick={() => this.props.onClick(location.name)}
+            favourite={location.favourite}
+          />
+        ))}
       </div>
     );
   }

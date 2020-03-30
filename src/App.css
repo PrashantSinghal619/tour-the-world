@@ -4,6 +4,8 @@
 
 .Home,
 .FavouritePlaces {
+  margin-left: 5rem;
+  padding: 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,6 +17,10 @@
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 600px) {
+
+  .Home,
+  .FavouritePlaces {
+    margin: 0;
+  }
 }

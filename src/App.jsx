@@ -136,11 +136,14 @@ export default App;
  * @returns {boolean} isFavourite
  */
 function checkFavourite(locationName) {
-  const isFavourite =
-    JSON.parse(window.localStorage.getItem("favourites")).findIndex(
-      location => location.name === locationName
-    ) !== -1
-      ? true
-      : false;
+  let isFavourite = false;
+  if (JSON.parse(window.localStorage.getItem("favourites"))) {
+    isFavourite =
+      JSON.parse(window.localStorage.getItem("favourites")).findIndex(
+        location => location.name === locationName
+      ) !== -1
+        ? true
+        : false;
+  }
   return isFavourite;
 }

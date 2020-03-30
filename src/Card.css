@@ -24,6 +24,13 @@
 .Card-head {
   clear: both;
   margin: 0;
+  overflow: hidden;
+}
+
+.placeholder {
+  position: relative;
+  border-radius: 8px;
+  animation: pulse 1s infinite ease-in-out;
 }
 
 .Card-image {
@@ -31,6 +38,9 @@
   display: block;
   border-radius: 8px;
   box-shadow: 0 0 30px rgba(16, 14, 23, .25);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .Card-body {
@@ -65,4 +75,18 @@
   transition: background 250ms ease-in-out;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+@keyframes pulse {
+  0% {
+    fill: rgba(71, 82, 104, .9);
+  }
+
+  50% {
+    fill: rgba(71, 82, 104, .7);
+  }
+
+  100% {
+    fill: rgba(71, 82, 104, .9);
+  }
 }

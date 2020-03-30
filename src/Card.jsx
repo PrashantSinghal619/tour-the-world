@@ -6,6 +6,14 @@ const Card = props => {
   return (
     <div className="Card">
       <div className="Card-head">
+        <svg
+          className="placeholder"
+          width="300"
+          height="200"
+          viewBox="0 0 300 200"
+        >
+          <rect width="300" height="200" rx="8" ry="8" />
+        </svg>
         <img className="Card-image" src={props.imageSource} alt={props.name} />
         <button className="toggle-favourite" onClick={props.onClick}>
           <i className={`fav-icon ${iconStyle} fa-2x fa-heart`}></i>

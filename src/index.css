@@ -35,7 +35,8 @@ a {
   color: var(--text-primary);
 }
 
-img {
+img,
+svg {
   border: 0;
   height: auto !important;
   max-width: 100%;

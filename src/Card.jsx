@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = props => {
+const Card = (props) => {
   const iconStyle = props.favourite ? "fas" : "far"; // fas represents the style-class for solid (highlighted) icon
   return (
     <div className="Card">
@@ -14,10 +14,16 @@ const Card = props => {
         >
           <rect width="300" height="200" rx="8" ry="8" />
         </svg>
-        <img className="Card-image" src={props.imageSource} alt={props.name} />
-        <button className="toggle-favourite" onClick={props.onClick}>
-          <i className={`fav-icon ${iconStyle} fa-2x fa-heart`}></i>
-        </button>
+        <div className="Card-image-wrapper">
+          <img
+            className="Card-image"
+            src={props.imageSource}
+            alt={props.name}
+          />
+          <button className="toggle-favourite" onClick={props.onClick}>
+            <i className={`fav-icon ${iconStyle} fa-2x fa-heart`}></i>
+          </button>
+        </div>
       </div>
       <div className="Card-body">
         <div className="Card-name">{props.name}</div>

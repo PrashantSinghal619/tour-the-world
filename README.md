@@ -1,6 +1,8 @@
 # TOUR THE WORLD
+
 ###### A React-Router demo webapp
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a7050042-07f1-470d-9ecc-c7ba6242630a/deploy-status)](https://app.netlify.com/sites/tour-the-world/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

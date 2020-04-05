@@ -7,17 +7,17 @@ const Navbar = () => {
     <nav className="Navbar">
       <ul className="Navbar-nav">
         <li className="logo">
-          <a href="#" className="nav-link">
+          <div className="nav-link">
             <span className="link-text logo-text">Tour The World</span>
             <i className="fas fa-2x fa-angle-double-right"></i>
-          </a>
+          </div>
         </li>
         <li id="home" className="nav-item">
           <Link
             className="nav-link"
             to={{
               pathname: "/",
-              state: { status: "homeActive" }
+              state: { status: "homeActive" },
             }}
           >
             <i className="home-icon fa-2x fas fa-igloo" />
@@ -29,7 +29,7 @@ const Navbar = () => {
             className="nav-link"
             to={{
               pathname: "/favourite-places",
-              state: { status: "favouriteActive" }
+              state: { status: "favouriteActive" },
             }}
           >
             <i className="favourite-icon fa-2x fas fa-heart" />

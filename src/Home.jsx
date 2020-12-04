@@ -5,7 +5,7 @@ import Card from "./Card";
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.title = "Tour The World";
+    this.title = "Tour The World - Away from home";
     document.title = this.title;
   }
 
